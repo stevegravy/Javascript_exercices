@@ -63,8 +63,6 @@ console.log(listeObjets)
 
 
 
-
-
 var objetsDisponibles = function (){//Affiche les objets disponibles
 	for(var i = 0; i<objetsAVendre.length; i++){
 		if (objetsAVendre[i].available == true) {
@@ -74,8 +72,6 @@ var objetsDisponibles = function (){//Affiche les objets disponibles
 }
 
  objetsDisponibles();
-
-
 
 
 var niveauMinimum = function (){
@@ -90,15 +86,83 @@ niveauMinimum();
 
 
 
-
+//Exercice Personnage
 var mainCharacter={
 	name: "Bibi",
 	level: 36,
 	life: 11,
-	var attack = function
+	attack: function(){
+		var nom = mainCharacter.name;
+		var arme = mainCharacter.weapon.name;
+		var accuracy = mainCharacter.level * mainCharacter.weapon.damage;
+		console.log(nom + " attaque avec l'arme " + arme + " les dégats sont de " + accuracy);
+	},
 	weapon:
 	{
 		name: "faucille",
 		damage: 12,
-	}
+	},
 };
+
+mainCharacter.attack();
+
+
+
+
+//Exercice Bonus
+var charachter={
+	name: "Lee",
+	level: 32,
+	life: 6,
+	attack: function(){
+		var nom = character.name;
+		var arme = character.weapon.name;
+		var accuracy = character.level * character.weapon.damage;
+		console.log(nom + " attaque avec l'arme " + arme + " les dégats sont " + accuracy);
+	},
+	weapon:
+	{
+		name: "hache",
+		damage: 62,
+	},
+};
+
+var opponentCharacter={
+	name: "Auroch",
+	level: 26,
+	life: 4,
+	attack: function(){
+		var nom = opponentCharacter.name;
+		var arme = opponentCharacter.weapon.name;
+		var accuracy = opponentCharacter.level * opponentCharacter.weapon.damage;
+		console.log(nom + " attaque avec l'arme " + arme + " les dégats sont " + accuracy);
+	},
+	weapon:
+	{
+		name: "glaive",
+		damage: 56,
+	},
+};
+
+var mainCharacter={
+	name: "Box shadow",
+	level: 40,
+	life: 14,
+	attack: function(){
+		var nom = mainCharacter.name;
+		var arme = mainCharacter.weapon.name;
+		var accuracy = mainCharacter.level * mainCharacter.weapon.damage;
+		console.log(nom + " attaque avec l'arme " + arme + " les dégats sont " + accuracy);
+	},
+	weapon:
+	{
+		name: "épée à deux mains",
+		damage: 62,
+	},
+};
+
+attack()
+
+
+
+
