@@ -1,4 +1,4 @@
-//Manipulation de classe
+/*//Manipulation de classe
 document.body.classList.remove('bg-aqua');
 document.body.classList.add('bg-olive');
 
@@ -43,7 +43,7 @@ var li = document.createElement("li");// Créer un élément <li> dans le premie
 var contenu = document.createTextNode("Mon meilleur ami est <a href='http://www.google.com'>Google</a>");// Créer du contenu texte
 li.appendChild(contenu);// ajouter le contenu dans la nouvelle balise <li>
 document.ul.appendChild(li);// placer le nouveau <li> dans le <ul>
-ul.li.getElementsByTagName(a).style.backgroundColor="green";//Changer la couleur du lien
+ul.li.getElementsByTagName(a).style.backgroundColor="green";//Changer la couleur du lien*/
 
 
 //Exercice 4 (qui est en fait le 5) : Création et suppression de plusieurs éléments
@@ -52,7 +52,7 @@ var li = document.createElement("li");
 var tab = ["Silent Teacher", "Code Monkey", "CodeCombat"];
 
 for (var i=0; i<ol.length; i++){
-    ol.removeChild(ol.firstChild);
+    ol.removeChild[i](ol.firstChild);
 }
 
 
@@ -62,12 +62,7 @@ for (var i=0; i<tab.length; i++){
     
 }
 
-var tab = ["Silent Teacher","Code Monkey", "CodeCombat"];
-for (let I=0; I<tab.length; I++) {
-  let liTab = document.createElement("li");
-  liTab.innerHTML = tab[I];
-  ol.appendChild(liTab);
-}
+
 
 
 
