@@ -1,72 +1,35 @@
-/*//Manipulation de classe
-document.body.classList.remove('bg-aqua');
-document.body.classList.add('bg-olive');
 
-document.getElementById("first-paragraph").classList.remove('bg-lime', 'gray');
+//Exercice 1
+var over = document.querySelectorAll('.hoverMe') ;
 
-document.getElementById("first-paragraph").classList.add('aqua');
+for (var i = 0; i < over.length; i++) {
+    over[i].addEventListener('mouseover',function(event){
+    var target = over[i];
+    event.target.style.display = 'none';
 
-document.getElementsByTagName("blockquote").classList.add('bg-while');
-
-
-
-//Selecteurs CSS
-var a = document.querySelector('#my-table');
-a.classList.add('bg-purple');//Ajouter la classe "bg-purple" à l'élément "my-table"
-
-var b = document.querySelectorAll('.container p');
-b.classList.add('shadow');//Ajouter la classe "shadow" à tous les paragraphes dans 'container'.
+    setTimeout(function() {
+    event.target.style.display = '';
+    },3000);
+  },false);
+};
 
 
-
+//Exercice 2
+document.querySelector('#reset').addEventListener("click",function() {
+  for (var i = 0; i < over.length; i++) {
+    var target = over[i]
+    target.style.backgroundColor = 'aqua';
+  }
+});
 
 
 //Exercice 3
-document.getElementsByTagName("pre").style.color="red";//change la couleur du texte
+var ax = document.querySelector('.axe-x');
+var ay = document.querySelector('.axe-y');
 
-document.getElementsByTagName("pre").style.backgroundColor="blue";//change le background
-
-
-document.getElementsByTagName("pre").style.borderTop="3px solid red";//Ajouter border-top
-
-document.getElementsByTagName("pre").style.borderBottom="3px solid red";//ajouter border-bottom
-
-var h3 = document.getElementsByTagName("h3")[0];
-h3.innerHTML="<em>Itelic title ! yeah !</em>";
-
-var h2 = document.getElementsByTagName("h3") [0];
-h2.innerHTML="<strong>HTML doens't work !</strong>";
-
-
-//Exercice 4 : Création d'éléments
-var li = document.createElement("li");// Créer un élément <li> dans le premier <ul>
-var contenu = document.createTextNode("Mon meilleur ami est <a href='http://www.google.com'>Google</a>");// Créer du contenu texte
-li.appendChild(contenu);// ajouter le contenu dans la nouvelle balise <li>
-document.ul.appendChild(li);// placer le nouveau <li> dans le <ul>
-ul.li.getElementsByTagName(a).style.backgroundColor="green";//Changer la couleur du lien*/
-
-
-//Exercice 4 (qui est en fait le 5) : Création et suppression de plusieurs éléments
-var ol = document.getElementsByTagName("ol");
-var li = document.createElement("li");
-var tab = ["Silent Teacher", "Code Monkey", "CodeCombat"];
-
-for (var i=0; i<ol.length; i++){
-    ol.removeChild[i](ol.firstChild);
-}
-
-
-for (var i=0; i<tab.length; i++){
-    var tabConstruction = document.createElement("li");
-    tab[i]
-    
-}
-
-
-
-
-
-
-
-
-
+document.addEventListener("mousemove",function(event) {
+  var x = event.clientX;
+  var y = event.clientY;
+  ax.innerHTML = 'Position en x = '+x;
+  ay.innerHTML = 'Position en y = '+y;
+})
